@@ -73,34 +73,3 @@ int main()
 	log.close();
 
 }
-
-
-
-
-//int main()
-//{
-//	char str[7];
-//	str[0] = 'h';
-//	str[1] = 'e';
-//	str[2] = 'l';
-//	str[3] = 'l';
-//	str[4] = 'o';
-//	str[5] = 0;
-//	std::cout << str;
-//	strcpy_s(str, " world");
-//	std::cout << str;
-//	int zahl;
-//	std::cin >> zahl;
-//	std::cout << " zahl " << zahl;
-//}
-
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-//// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
-
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcdeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
