@@ -1,4 +1,5 @@
-#include <iostream>
+#include "pch.h"
+#include "framework.h"
 
 int Potenz_berechnen(int Zahl, int Potenz)
 {

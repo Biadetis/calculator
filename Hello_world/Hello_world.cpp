@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "Berechnen.h"
+#include "..\calc\framework.h"
 #include <fstream>
 #include <string>
 
@@ -46,14 +46,13 @@ int main()
 	while (std::getline(file, Zeile))
 	{
 		std::cout << Zeile << std::endl;
-		int pos;
+		size_t pos;
 		pos = Zeile.find(",");
 		std::string cmd = Zeile.substr(0, pos);
-		int result;
+		int result = -1;
 		if (cmd == "Potenz")
 		{
 			std::string cmd_p_1 = Zeile.substr(pos + 1);
-			int cmd_p_2;
 			pos = cmd_p_1.find(",");
 			std::string Zahl_1 = cmd_p_1.substr(0, pos);
 			std::string Zahl_2 = cmd_p_1.substr(pos + 1);
