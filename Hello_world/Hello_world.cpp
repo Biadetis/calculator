@@ -5,6 +5,7 @@
 #include "Berechnen.h"
 #include <fstream>
 #include <string>
+
 void Fakultaet()
 {
 	int u;
