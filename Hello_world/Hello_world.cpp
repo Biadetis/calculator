@@ -1,10 +1,9 @@
-// Hello_world.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
 
 #include <iostream>
 #include "..\calc\framework.h"
 #include <fstream>
 #include <string>
+#include <math.h>
 
 void Fakultaet()
 {
@@ -26,18 +25,33 @@ void Potenz()
 	result = Potenz_berechnen(u, i);
 	std::cout << result << std::endl;
 }
+void Log()
+{
+	double u;
+	double i;
+	double result;
+	std::cout << "Geben Sie eine Zahl ein: \n";
+	std::cin >> u;
+	std::cout << "Geben Sie eine weitere Zahl ein\n";
+	std::cin >> i;
+	result = Log_berechnen(u, i);
+	std::cout << "log" << u << "(" << i << ")" <<"=" << result << std::endl;
+}
 
 int main()
 {
 	char r[10];
-	std::cout << "(P)otenz oder (F)akultaet?\n";
+	std::cout << "(P)otenz, (L)og oder (F)akultaet?\n";
 	std::cin >> r;
 	if (strcmp(r, "P") == 0 || strcmp(r, "p") == 0)
 		Potenz();
 	else
 		if (strcmp(r, "F") == 0 || strcmp(r, "f") == 0)
 			Fakultaet();
-		else std::cout << "Fehler!\n";
+		else 
+			if (strcmp(r, "L") == 0 || strcmp(r, "l") ==0)
+			Log();
+		else std::cerr << "Fehler!\n";
 	std::ifstream file;
 	std::string Zeile;
 	file.open("C:\\temp\\Berechnungen.txt");
@@ -49,7 +63,7 @@ int main()
 		size_t pos;
 		pos = Zeile.find(",");
 		std::string cmd = Zeile.substr(0, pos);
-		int result = -1;
+		double result = -1;
 		if (cmd == "Potenz")
 		{
 			std::string cmd_p_1 = Zeile.substr(pos + 1);
@@ -66,6 +80,16 @@ int main()
 			std::string cmd_f_1 = Zeile.substr(pos + 1);
 			int z1 = atoi(cmd_f_1.c_str());
 			result = Fakultaet_berechnen(z1);
+		}
+		if (cmd == "Log")
+		{
+			std::string cmd_p_1 = Zeile.substr(pos + 1);
+			pos = cmd_p_1.find(",");
+			std::string Zahl_1 = cmd_p_1.substr(0, pos);
+			std::string Zahl_2 = cmd_p_1.substr(pos + 1);
+			double z1 = atof(Zahl_1.c_str());
+			double z2 = atof(Zahl_2.c_str());
+			result = Log_berechnen(z1, z2);
 		}
 		log << result << std::endl;
 	}

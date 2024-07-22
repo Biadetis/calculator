@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "framework.h"
+#include <math.h>
 
 int Potenz_berechnen(int Zahl, int Potenz)
 {
@@ -22,4 +23,10 @@ int Fakultaet_berechnen(int u)
         i = i - 1;
     }
     return u;
+}
+double Log_berechnen(double u, double i)
+{
+    double result;
+    result = log2(u) / log2(i);
+    return result;
 }
