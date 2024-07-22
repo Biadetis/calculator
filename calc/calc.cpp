@@ -2,7 +2,7 @@
 #include "framework.h"
 #include <math.h>
 
-int Potenz_berechnen(int Zahl, int Potenz)
+int PotenzBerechnen(int Zahl, int Potenz)
 {
     int result;
     result = 1;
@@ -13,7 +13,7 @@ int Potenz_berechnen(int Zahl, int Potenz)
     }
     return result;
 }
-int Fakultaet_berechnen(int u)
+int FakultaetBerechnen(int u)
 {
     int i;
     i = u;
@@ -24,7 +24,7 @@ int Fakultaet_berechnen(int u)
     }
     return u;
 }
-double Log_berechnen(double u, double i)
+double LogBerechnen(double u, double i)
 {
     double result;
     result = log2(u) / log2(i);

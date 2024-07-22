@@ -127,12 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="calculator.cpp" />
     <ClCompile Include="Hello_world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\calc\calc.vcxproj">
       <Project>{af8764b9-7903-4cd1-8f95-556287cd099c}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="calculator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
