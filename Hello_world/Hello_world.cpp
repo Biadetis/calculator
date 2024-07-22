@@ -2,6 +2,8 @@
 #include <iostream>
 #include "..\calc\framework.h"
 #include <fstream>
+#include <algorithm>
+#include <cctype>
 #include <string>
 #include <math.h>
 
@@ -40,18 +42,22 @@ void Log()
 
 int main()
 {
-	char r[10];
+	char r;
 	std::cout << "(P)otenz, (L)og oder (F)akultaet?\n";
 	std::cin >> r;
-	if (strcmp(r, "P") == 0 || strcmp(r, "p") == 0)
-		Potenz();
-	else
-		if (strcmp(r, "F") == 0 || strcmp(r, "f") == 0)
-			Fakultaet();
-		else 
-			if (strcmp(r, "L") == 0 || strcmp(r, "l") ==0)
-			Log();
-		else std::cerr << "Fehler!\n";
+	r = std::tolower(r);
+	switch (r)
+	{
+	case 'p':
+		Potenz(); break;
+	case 'f':
+		Fakultaet(); break;
+	case 'l':
+		Log(); break;
+	default:
+		std::cerr << "Fehler!\n";
+	}
+
 	std::ifstream file;
 	std::string Zeile;
 	file.open("C:\\temp\\Berechnungen.txt");
