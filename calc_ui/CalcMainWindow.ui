@@ -80,7 +80,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <item row="3" column="1">
          <widget class="QTextEdit" name="PotenzOutput">
           <property name="font">
-           <font/>
+           <font>
+            <pointsize>20</pointsize>
+           </font>
           </property>
          </widget>
         </item>
@@ -105,7 +107,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          <widget class="QTextEdit" name="FakultaetOutput">
           <property name="font">
            <font>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
          </widget>
@@ -134,7 +136,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          <widget class="QTextEdit" name="LogOutput">
           <property name="font">
            <font>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
          </widget>

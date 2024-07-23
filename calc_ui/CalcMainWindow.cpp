@@ -31,7 +31,7 @@ void CalcMainWindow::OnClickLogExec()
 	{
 		result = LogBerechnen(u,i);
 		QString ResultString = QString::number(result);
-		ui.LogOutput->setPlainText(ResultString);
+		ui.LogOutput->setHtml("<p>log<sub>" + LString1 + "</sub>(" + LString2 + ") = " + ResultString +  "</p>");
 	}
 }
 void CalcMainWindow::OnClickFakultaetExec()
@@ -49,7 +49,7 @@ void CalcMainWindow::OnClickFakultaetExec()
 	{
 		result = FakultaetBerechnen(u);
 		QString ResultString = QString::number(result);
-		ui.FakultaetOutput->setPlainText(ResultString);
+		ui.FakultaetOutput->setHtml("<p>" + UString + "!" + " = " + ResultString + "< / p>");
 	}
 
 }
@@ -73,6 +73,6 @@ void CalcMainWindow::OnClickPotenzExec()
 	{
 		result = PotenzBerechnen(u, i);
 		QString ResultString = QString::number(result);
-		ui.PotenzOutput->setPlainText(ResultString);
+		ui.PotenzOutput->setHtml("<p>" + UString + "<sup>" + IString + "</sup> = " + ResultString + "</p>");
 	}
 }
