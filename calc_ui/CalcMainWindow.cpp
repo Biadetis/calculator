@@ -8,6 +8,12 @@ CalcMainWindow::CalcMainWindow(QWidget* parent)
 	connect(ui.PotenzExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickPotenzExec);
 	connect(ui.FakultaetExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickFakultaetExec);
 	connect(ui.LogExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickLogExec);
+
+	QPixmap bkgnd(":/CalcMainWindow/AdobeStock_290928080.jpeg");
+	bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+	QPalette palette;
+	palette.setBrush(QPalette::Window, bkgnd);
+	this->setPalette(palette);
 }
 
 CalcMainWindow::~CalcMainWindow()
