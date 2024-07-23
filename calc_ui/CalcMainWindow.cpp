@@ -6,11 +6,53 @@ CalcMainWindow::CalcMainWindow(QWidget* parent)
 {
 	ui.setupUi(this);
 	connect(ui.PotenzExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickPotenzExec);
-
+	connect(ui.FakultaetExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickFakultaetExec);
+	connect(ui.LogExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickLogExec);
 }
 
 CalcMainWindow::~CalcMainWindow()
 {}
+void CalcMainWindow::OnClickLogExec()
+{
+	double u;
+	double i;
+	double result;
+	bool uOK = false;
+	bool iOK = false;
+	QString LString1 = ui.LogInput1->text();
+	QString LString2 = ui.LogInput2->text();
+	u = LString1.toDouble(&uOK);
+	i = LString2.toDouble(&iOK);
+	if (uOK == false ||iOK == false)
+	{
+		ui.LogOutput->setHtml("<p style=\"color:red;\">Keine Zahl erkannt!</p>");
+	}
+	else
+	{
+		result = LogBerechnen(u,i);
+		QString ResultString = QString::number(result);
+		ui.LogOutput->setPlainText(ResultString);
+	}
+}
+void CalcMainWindow::OnClickFakultaetExec()
+{
+	int u;
+	int result;
+	bool uOK = false;
+	QString UString = ui.FakultaetInput->text();
+	u = UString.toInt(&uOK);
+	if (uOK == false)
+	{
+		ui.FakultaetOutput->setHtml("<p style=\"color:red;\">Keine Zahl erkannt!</p>");
+	}
+	else
+	{
+		result = FakultaetBerechnen(u);
+		QString ResultString = QString::number(result);
+		ui.FakultaetOutput->setPlainText(ResultString);
+	}
+
+}
 void CalcMainWindow::OnClickPotenzExec()
 {
 	int u;

@@ -14,4 +14,6 @@ public:
 private:
     Ui::CalcMainWindowClass ui;
     void OnClickPotenzExec();
+    void OnClickFakultaetExec();
+    void OnClickLogExec();
 };

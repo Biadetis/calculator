@@ -43,7 +43,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -53,14 +53,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Nenner</string>
+           <string>Nenner:</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Zähler</string>
+           <string>Zähler:</string>
           </property>
          </widget>
         </item>
@@ -80,9 +80,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <item row="3" column="1">
          <widget class="QTextEdit" name="PotenzOutput">
           <property name="font">
-           <font>
-            <pointsize>22</pointsize>
-           </font>
+           <font/>
           </property>
          </widget>
         </item>
@@ -92,11 +90,77 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <attribute name="title">
         <string>Fakultät</string>
        </attribute>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Eingabe:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="FakultaetInput"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTextEdit" name="FakultaetOutput">
+          <property name="font">
+           <font>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="FakultaetExec">
+          <property name="text">
+           <string>Berechnen</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
         <string>Logarithmus</string>
        </attribute>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="LogInput1"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="LogInput2"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTextEdit" name="LogOutput">
+          <property name="font">
+           <font>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Basis:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Numerus:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="LogExec">
+          <property name="text">
+           <string>Berechnen</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
