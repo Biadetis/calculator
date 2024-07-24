@@ -16,4 +16,5 @@ private:
     void OnClickPotenzExec();
     void OnClickFakultaetExec();
     void OnClickLogExec();
+    void resizeEvent(QResizeEvent*);
 };

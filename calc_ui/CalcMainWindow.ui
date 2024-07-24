@@ -15,33 +15,52 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>60</height>
-       </size>
-      </property>
+     <widget class="QLabel" name="label_6">
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <pointsize>23</pointsize>
        </font>
       </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Calculator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <property name="text">
+       <string>Calculator</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(245, 245, 245, 20);
+
+QTabBar::tab {
+background-color: rgba(230, 230, 230, 20)
+padding: 5px;
+}
+QTabBar::tab:selected {
+background-color: rgb(245, 245, 245);
+padding: 5px;
+}</string>
+      </property>
       <property name="currentIndex">
        <number>2</number>
       </property>
@@ -52,6 +71,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <layout class="QFormLayout" name="formLayout">
         <item row="0" column="0">
          <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Nenner:</string>
           </property>
@@ -59,30 +83,61 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Zähler:</string>
           </property>
          </widget>
         </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="PotenzInput1">
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="PotenzInput2">
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
+         </widget>
+        </item>
         <item row="2" column="0">
          <widget class="QPushButton" name="PotenzExec">
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(0, 0, 0); 
+</string>
+          </property>
           <property name="text">
            <string>Berechnen</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="PotenzInput1"/>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="PotenzInput2"/>
-        </item>
-        <item row="3" column="1">
+        <item row="2" column="1">
          <widget class="QTextEdit" name="PotenzOutput">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <pointsize>20</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
           </property>
          </widget>
         </item>
@@ -95,13 +150,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <layout class="QFormLayout" name="formLayout_2">
         <item row="0" column="0">
          <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Eingabe:</string>
           </property>
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLineEdit" name="FakultaetInput"/>
+         <widget class="QLineEdit" name="FakultaetInput">
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
+         </widget>
         </item>
         <item row="1" column="1">
          <widget class="QTextEdit" name="FakultaetOutput">
@@ -110,10 +174,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <pointsize>20</pointsize>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
          </widget>
         </item>
         <item row="1" column="0">
          <widget class="QPushButton" name="FakultaetExec">
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(0, 0, 0); </string>
+          </property>
           <property name="text">
            <string>Berechnen</string>
           </property>
@@ -126,11 +201,64 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string>Logarithmus</string>
        </attribute>
        <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Basis:</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="1">
-         <widget class="QLineEdit" name="LogInput1"/>
+         <widget class="QLineEdit" name="LogInput1">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Numerus:</string>
+          </property>
+         </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="LogInput2"/>
+         <widget class="QLineEdit" name="LogInput2">
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="LogExec">
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(0, 0, 0); </string>
+          </property>
+          <property name="text">
+           <string>Berechnen</string>
+          </property>
+         </widget>
         </item>
         <item row="2" column="1">
          <widget class="QTextEdit" name="LogOutput">
@@ -139,26 +267,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <pointsize>20</pointsize>
            </font>
           </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Basis:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>Numerus:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="LogExec">
-          <property name="text">
-           <string>Berechnen</string>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(230,230,230,255);</string>
           </property>
          </widget>
         </item>
@@ -168,16 +278,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>742</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -186,7 +286,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

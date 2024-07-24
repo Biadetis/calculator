@@ -9,7 +9,7 @@ CalcMainWindow::CalcMainWindow(QWidget* parent)
 	connect(ui.FakultaetExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickFakultaetExec);
 	connect(ui.LogExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickLogExec);
 
-	QPixmap bkgnd(":/CalcMainWindow/AdobeStock_290928080.jpeg");
+	QPixmap bkgnd(":/CalcMainWindow/AdobeStock_290928080_klein.jpg");
 	bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
 	QPalette palette;
 	palette.setBrush(QPalette::Window, bkgnd);
@@ -81,4 +81,12 @@ void CalcMainWindow::OnClickPotenzExec()
 		QString ResultString = QString::number(result);
 		ui.PotenzOutput->setHtml("<p>" + UString + "<sup>" + IString + "</sup> = " + ResultString + "</p>");
 	}
+}
+void CalcMainWindow::resizeEvent(QResizeEvent*)
+{
+	QPixmap bkgnd(":/CalcMainWindow/AdobeStock_290928080_klein.jpg");
+	bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+	QPalette palette;
+	palette.setBrush(QPalette::Window, bkgnd);
+	this->setPalette(palette);
 }
