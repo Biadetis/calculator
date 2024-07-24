@@ -7,9 +7,9 @@ void Calculator::Potenz()
 	int u;
 	int i;
 	int result;
-	std::cout << "Geben Sie eine Zahl ein: \n";
+	std::cout << "Gib eine Zahl ein: \n";
 	std::cin >> u;
-	std::cout << "Geben Sie eine weitere Zahl ein\n";
+	std::cout << "Gib eine weitere Zahl ein\n";
 	std::cin >> i;
 	result = PotenzBerechnen(u, i);
 	
@@ -21,7 +21,7 @@ void Calculator::Potenz()
 void Calculator::Fakultaet()
 {
 	int u;
-	std::cout << "Bitte geben Sie eine Zahl ein: \n";
+	std::cout << "Bitte gib eine Zahl ein: \n";
 	std::cin >> u;
 	if (erweiterteAusgabe)
 		std::cout << u << "!" << " = " << FakultaetBerechnen(u) << std::endl;
@@ -33,9 +33,9 @@ void Calculator::Log()
 	double u;
 	double i;
 	double result;
-	std::cout << "Geben Sie eine Zahl ein: \n";
+	std::cout << "Gib eine Zahl ein: \n";
 	std::cin >> u;
-	std::cout << "Geben Sie eine weitere Zahl ein\n";
+	std::cout << "Gib eine weitere Zahl ein\n";
 	std::cin >> i;
 	result = LogBerechnen(u, i);
 	std::cout << "log" << u << "(" << i << ")" << "=" << result << std::endl;
