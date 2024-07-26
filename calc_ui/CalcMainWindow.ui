@@ -55,6 +55,12 @@ background-color:rgb(210, 210, 210);
     </item>
     <item>
      <layout class="QHBoxLayout" name="GraphLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="font">

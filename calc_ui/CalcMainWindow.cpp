@@ -94,4 +94,5 @@ void CalcMainWindow::resizeEvent(QResizeEvent*)
 	QPalette palette;
 	palette.setBrush(QPalette::Window, bkgnd);
 	this->setPalette(palette);
+	Graph->setFixedHeight(size().height() - 150);
 }
