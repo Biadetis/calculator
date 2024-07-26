@@ -13,6 +13,17 @@
   <property name="windowTitle">
    <string>CalcMainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+QTabBar::tab {
+background-color: rgba(230, 230, 230, 20)
+padding: 5px;
+}
+QTabBar::tab:selected {
+color: red;
+background-color:rgb(210, 210, 210);
+}</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="leftMargin">
@@ -57,8 +68,8 @@ background-color: rgba(230, 230, 230, 20)
 padding: 5px;
 }
 QTabBar::tab:selected {
-background-color: rgb(245, 245, 245);
-padding: 5px;
+color: red;
+background-color:rgb(210, 210, 210);
 }</string>
       </property>
       <property name="currentIndex">
