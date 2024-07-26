@@ -95,6 +95,7 @@
     <QtRcc Include="CalcMainWindow.qrc" />
     <QtUic Include="CalcMainWindow.ui" />
     <QtMoc Include="CalcMainWindow.h" />
+    <ClCompile Include="CalcGraph.cpp" />
     <ClCompile Include="CalcMainWindow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -102,6 +103,9 @@
     <ProjectReference Include="..\calc\calc.vcxproj">
       <Project>{af8764b9-7903-4cd1-8f95-556287cd099c}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="CalcGraph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

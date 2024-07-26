@@ -54,14 +54,16 @@ background-color:rgb(210, 210, 210);
      </widget>
     </item>
     <item>
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(245, 245, 245, 20);
+     <layout class="QHBoxLayout" name="GraphLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(245, 245, 245, 20);
 
 QTabBar::tab {
 background-color: rgba(230, 230, 230, 20)
@@ -71,221 +73,223 @@ QTabBar::tab:selected {
 color: red;
 background-color:rgb(210, 210, 210);
 }</string>
-      </property>
-      <property name="currentIndex">
-       <number>2</number>
-      </property>
-      <widget class="QWidget" name="tab">
-       <attribute name="title">
-        <string>Potenz</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Nenner:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Zähler:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="PotenzInput1">
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="PotenzInput2">
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="PotenzExec">
-          <property name="font">
-           <font>
-            <pointsize>17</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:rgb(0, 0, 0); 
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Potenz</string>
+         </attribute>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Nenner:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Zähler:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="PotenzInput1">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="PotenzInput2">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="PotenzExec">
+            <property name="font">
+             <font>
+              <pointsize>17</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(0, 0, 0); 
 </string>
-          </property>
-          <property name="text">
-           <string>Berechnen</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QTextEdit" name="PotenzOutput">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>200</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_3">
-       <attribute name="title">
-        <string>Fakultät</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_2">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Eingabe:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="FakultaetInput">
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QTextEdit" name="FakultaetOutput">
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="FakultaetExec">
-          <property name="font">
-           <font>
-            <pointsize>17</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:rgb(0, 0, 0); </string>
-          </property>
-          <property name="text">
-           <string>Berechnen</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>Logarithmus</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_3">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Basis:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="LogInput1">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Numerus:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="LogInput2">
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="LogExec">
-          <property name="font">
-           <font>
-            <pointsize>17</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:rgb(0, 0, 0); </string>
-          </property>
-          <property name="text">
-           <string>Berechnen</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QTextEdit" name="LogOutput">
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(230,230,230,255);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
+            </property>
+            <property name="text">
+             <string>Berechnen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextEdit" name="PotenzOutput">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Fakultät</string>
+         </attribute>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Eingabe:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="FakultaetInput">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextEdit" name="FakultaetOutput">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="FakultaetExec">
+            <property name="font">
+             <font>
+              <pointsize>17</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(0, 0, 0); </string>
+            </property>
+            <property name="text">
+             <string>Berechnen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Logarithmus</string>
+         </attribute>
+         <layout class="QFormLayout" name="formLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Basis:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="LogInput1">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Numerus:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="LogInput2">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="LogExec">
+            <property name="font">
+             <font>
+              <pointsize>17</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(0, 0, 0); </string>
+            </property>
+            <property name="text">
+             <string>Berechnen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextEdit" name="LogOutput">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:rgba(230,230,230,255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

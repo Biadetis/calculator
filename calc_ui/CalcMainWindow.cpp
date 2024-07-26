@@ -1,10 +1,12 @@
 #include "CalcMainWindow.h"
 #include "..\calc\framework.h"
-
+#include <CalcGraph.h>
 CalcMainWindow::CalcMainWindow(QWidget* parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+	Graph = new CalcGraph();
+	ui.GraphLayout->addWidget(Graph);
 	connect(ui.PotenzExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickPotenzExec);
 	connect(ui.FakultaetExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickFakultaetExec);
 	connect(ui.LogExec, &QPushButton::clicked, this, &CalcMainWindow::OnClickLogExec);
@@ -29,6 +31,7 @@ void CalcMainWindow::OnClickLogExec()
 	QString LString2 = ui.LogInput2->text();
 	u = LString1.toDouble(&uOK);
 	i = LString2.toDouble(&iOK);
+	Graph->YBerechnenLog(u, i);
 	if (uOK == false ||iOK == false)
 	{
 		ui.LogOutput->setHtml("<p style=\"color:red;\">Keine Zahl erkannt!</p>");
@@ -71,6 +74,8 @@ void CalcMainWindow::OnClickPotenzExec()
 	QString IString = ui.PotenzInput2->text();
 	u = UString.toInt(&uOK);
 	i = IString.toInt(&iOK);
+	Graph->YBerechnen(u, i);
+
 	if (uOK == false || iOK == false)
 	{
 		ui.PotenzOutput->setHtml("<p style=\"color:red;\">Keine Zahl erkannt!</p>");

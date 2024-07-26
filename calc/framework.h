@@ -4,3 +4,4 @@
 int PotenzBerechnen(int Zahl, int Potenz);
 int FakultaetBerechnen(int u);
 double LogBerechnen(double u, double i);
+double PotenzBerechnenDouble(double Zahl, double Potenz);

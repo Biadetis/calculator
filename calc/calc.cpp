@@ -12,6 +12,18 @@ int PotenzBerechnen(int Zahl, int Potenz)
         Potenz = Potenz - 1;
     }
     return result;
+
+}
+double PotenzBerechnenDouble(double Zahl, double Potenz)
+{
+    double result;
+    result = 1;
+    while (Potenz > 0)
+    {
+        result = result * Zahl;
+        Potenz = Potenz - 1;
+    }
+    return result;
 }
 int FakultaetBerechnen(int u)
 {

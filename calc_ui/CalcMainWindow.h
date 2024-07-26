@@ -1,5 +1,5 @@
 #pragma once
-
+#include <CalcGraph.h>
 #include <QtWidgets/QMainWindow>
 #include "ui_CalcMainWindow.h"
 
@@ -17,4 +17,5 @@ private:
     void OnClickFakultaetExec();
     void OnClickLogExec();
     void resizeEvent(QResizeEvent*);
+    CalcGraph* Graph;
 };
