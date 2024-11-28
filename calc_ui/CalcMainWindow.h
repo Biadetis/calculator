@@ -1,5 +1,5 @@
 #pragma once
-#include <CalcGraph.h>
+#include "CalcGraph.h"
 #include <QtWidgets/QMainWindow>
 #include "ui_CalcMainWindow.h"
 

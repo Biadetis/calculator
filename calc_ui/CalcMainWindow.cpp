@@ -1,6 +1,7 @@
 #include "CalcMainWindow.h"
 #include "..\calc\framework.h"
-#include <CalcGraph.h>
+#include "CalcGraph.h"
+
 CalcMainWindow::CalcMainWindow(QWidget* parent)
 	: QMainWindow(parent)
 {

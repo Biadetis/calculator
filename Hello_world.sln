@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_world", "Hello_world\Hello_world.vcxproj", "{61B9E04A-99F3-4C27-9ED3-E529A432C683}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CCB69D8-0F1C-46AB-9DB3-ABA49CEF6465} = {8CCB69D8-0F1C-46AB-9DB3-ABA49CEF6465}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "calc", "calc\calc.vcxproj", "{AF8764B9-7903-4CD1-8F95-556287CD099C}"
 EndProject
